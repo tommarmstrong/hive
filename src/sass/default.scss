@@ -7,13 +7,27 @@ html {
   padding: 0;
 }
 
+$bodyWidth: 1024px;
+
 body {
-  width: 1280px;
+  width: $bodyWidth;
+  margin: 100px auto;
+}
+
+$iphoneWidth: 316px;
+
+.iphone-container {
+  position: relative;
+  display: inline-block;
+
+  .iphone {
+	width: $iphoneWidth;
+  }
 }
 
 .PhoneApp {
-  $width: 375px;
-  $height: 667px;
+  $width: 281px;
+  $height: 500px;
 
   $headingFont: "Helvetica";
   $bodyFont: "Helvetica";
@@ -22,7 +36,9 @@ body {
 
   $sidePadding: 8px;
 
-  position: relative;
+  position: absolute;
+  top: 64px;
+  left: 18px;
   display: inline-block;
   width: $width;
   height: $height;
@@ -30,14 +46,17 @@ body {
 
   .StatusBar {
 	width: $width;
-	height: 20px;
+	height: 15px;
 	background-color: black;
 	color: white;
 
 	.time {
 	  display: block;
 	  text-align: center;
-	  line-height: 20px;
+	  line-height: 15px;
+
+	  font-size: 10px;
+	  font-family: $headingFont;
 	}
   }
 
@@ -47,7 +66,7 @@ body {
 	left:0;
 
 	width: $width;
-	height: 50px;
+	height: 38px;
 
 	background-color: #D8D8D8;
 
@@ -56,7 +75,11 @@ body {
 
 	  td {
 		text-align: center;
-		height: 50px;
+		height: 38px;
+
+		img {
+		  height: 28px;
+		}
 	  }
 	}
   }
@@ -78,7 +101,7 @@ body {
 
 	h2 {
 	  font: 500 18px $headingFont;
-	  margin: $sidePadding*3 0 $sidePadding $sidePadding;
+	  margin: $sidePadding*2 0 $sidePadding $sidePadding;
 	}
 
 	img.avatar {
@@ -103,10 +126,10 @@ body {
 	border-bottom: 1px solid $borderColour;
 
 	h1 {
-	  font: 500 18px $headingFont;
+	  font: 500 14px $headingFont;
 	}
 
-	$iconWidth: 44px;
+	$iconWidth: 33px;
 
 	.activity-icon {
 	  width: $iconWidth;
@@ -130,11 +153,28 @@ body {
 	  display: inline-block;
 	  vertical-align: top;
 
-	  font: 500 14px $bodyFont;
+	  font: 500 12px $bodyFont;
 
 	  p {
 		margin-top: 2px;
 	  }
 	}
+  }
+}
+
+.Info {
+
+  display: inline-block;
+  vertical-align: top;
+
+  width: $bodyWidth - $iphoneWidth - 60;
+  margin: 150px 0 0 60px;
+
+  h1, p {
+	font-family: "Helvetica";
+  }
+
+  p {
+	margin-top: 10px;
   }
 }
