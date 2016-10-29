@@ -8,22 +8,23 @@ const PhoneApp = ({view}) => {
 
     let user = {
         profile: {
-            name: "John Applessed",
-            image: "john.png"
+            name: "John Appleseed"
         },
         activities: [
             {
                 label: "Today",
                 items: [
                     {
-                        type: "Type",
-                        title: "Title",
-                        description: "Description"
+                        type: "stairs",
+                        title: "201 kJ of energy saved",
+                        lineOne: "By not using the elevators",
+                        lineTwo: " 3 flights of stairs climbed"
                     },
                     {
-                        type: "Type",
-                        title: "Title",
-                        description: "Description"
+                        type: "phosphorous",
+                        title: "21g of Phosphorous recovered",
+                        lineOne: "by using the bathrooms in Building 11",
+                        lineTwo: "2 pees"
                     }
                 ]
             }

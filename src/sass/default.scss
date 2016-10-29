@@ -16,6 +16,8 @@ body {
   $height: 667px;
 
   $headingFont: "Helvetica";
+  $bodyFont: "Helvetica";
+
   $borderColour: #979797;
 
   $sidePadding: 8px;
@@ -54,7 +56,35 @@ body {
 
 	  td {
 		text-align: center;
+		height: 50px;
 	  }
+	}
+  }
+
+  .Profile {
+
+	h1.name, .avatar {
+	  margin-top: 3*$sidePadding;
+	  margin-left: $sidePadding;
+	}
+
+	h1.name {
+	  display: inline-block;
+	  font: 500 24px $headingFont;
+	  vertical-align: top;
+	  line-height: 56px;
+	  margin-left: 2*$sidePadding;
+	}
+
+	h2 {
+	  font: 500 18px $headingFont;
+	  margin: $sidePadding*3 0 $sidePadding $sidePadding;
+	}
+
+	img.avatar {
+	  max-width: 56px;
+	  max-height: 56px;
+	  display: inline;
 	}
   }
 
@@ -76,6 +106,35 @@ body {
 	  font: 500 18px $headingFont;
 	}
 
+	$iconWidth: 44px;
 
+	.activity-icon {
+	  width: $iconWidth;
+	  height: $iconWidth;
+	  margin-top: 4px;
+
+	  display: inline-block;
+
+	  background: no-repeat center center;
+	  background-size: contain;
+
+	  &.stairs {background-image: url("../static/icons/stairs.svg");}
+	  &.phosphorous {background-image: url("../static/icons/phosphorous.svg");}
+	  &.coffee {background-image: url("../static/icons/coffee.svg");}
+
+	}
+
+	.details {
+	  width: $width - $sidePadding*3 - $iconWidth;
+	  margin-left: $sidePadding;
+	  display: inline-block;
+	  vertical-align: top;
+
+	  font: 500 14px $bodyFont;
+
+	  p {
+		margin-top: 2px;
+	  }
+	}
   }
 }

@@ -7,7 +7,7 @@ const ActivityList = ({activities}) => {
     const sections = activities.map(activity => {
 
         const listItems = activity.items.map(item =>
-            <ActivityItem type={item.type} title={item.title} description={item.description}/>
+            <ActivityItem type={item.type} title={item.title} lineOne={item.lineOne} lineTwo={item.lineTwo}/>
         )
 
         return (

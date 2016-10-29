@@ -5,11 +5,11 @@ const TabBar = ({screen}) => (
         <table>
             <tbody>
                 <tr>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
+                    <td><img src={require("../static/icons/profile.svg")} /></td>
+                    <td><img src={require("../static/icons/leaderboard.svg")} /></td>
+                    <td><img src={require("../static/icons/plus.svg")} /></td>
+                    <td><img src={require("../static/icons/building.svg")} /></td>
+                    <td><img src={require("../static/icons/leaf.svg")} /></td>
                 </tr>
             </tbody>
         </table>
