@@ -14,7 +14,7 @@ module.exports = {
     ],
     output: {
         path: BUILD_PATH,
-        publicPath: process.env.NODE_ENV === 'production' ? "" : "http://localhost:8080/app/",
+        publicPath: process.env.NODE_ENV === 'production' ? "" : "http://localhost:8080/",
         filename: "bundle.js"
     },
     devtool: 'source-map',

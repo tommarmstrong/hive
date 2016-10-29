@@ -1,0 +1,81 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 1280px;
+}
+
+.PhoneApp {
+  $width: 375px;
+  $height: 667px;
+
+  $headingFont: "Helvetica";
+  $borderColour: #979797;
+
+  $sidePadding: 8px;
+
+  position: relative;
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background-color: #efefef;
+
+  .StatusBar {
+	width: $width;
+	height: 20px;
+	background-color: black;
+	color: white;
+
+	.time {
+	  display: block;
+	  text-align: center;
+	  line-height: 20px;
+	}
+  }
+
+  .TabBar {
+	position: absolute;
+	bottom: 0;
+	left:0;
+
+	width: $width;
+	height: 50px;
+
+	background-color: #D8D8D8;
+
+	table {
+	  width: 100%;
+
+	  td {
+		text-align: center;
+	  }
+	}
+  }
+
+  .ListDivider {
+	h1 {
+	  padding: 3px $sidePadding;
+	  font: 500 12px $headingFont;
+	}
+
+	border-top: 1px solid $borderColour;
+	border-bottom: 1px solid $borderColour;
+  }
+
+  .ActivityItem {
+	padding: 4px $sidePadding;
+	border-bottom: 1px solid $borderColour;
+
+	h1 {
+	  font: 500 18px $headingFont;
+	}
+
+
+  }
+}
