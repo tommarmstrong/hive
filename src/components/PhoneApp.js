@@ -3,55 +3,19 @@ import StatusBar from './StatusBar'
 import TabBar from './TabBar'
 import Profile from './Views/Profile'
 import Building from './Views/Building'
+import Add from './Add'
 import views from './Views/views'
 
 const PhoneApp = ({view}) => {
-
-    let user = {
-        profile: {
-            name: "John Appleseed"
-        },
-        activities: [
-            {
-                label: "Today",
-                items: [
-                    {
-                        type: "stairs",
-                        title: "201 kJ of energy saved",
-                        lineOne: "By not using the elevators",
-                        lineTwo: " 3 flights of stairs climbed"
-                    },
-                    {
-                        type: "phosphorous",
-                        title: "21g of Phosphorous recovered",
-                        lineOne: "by using the bathrooms in Building 11",
-                        lineTwo: "2 pees"
-                    }
-                ]
-            }
-        ]
-    }
-
-    let buildingStats = [
-        {
-            label: "Current stats",
-            items: [{
-                type: "energy",
-                title: "5 Mega Watts of Energy",
-                lineOne: "currently being used in the building",
-                lineTwo: ""
-            }]
-        }
-    ]
 
     let viewComponent
 
     switch (view) {
         case views.PROFILE:
-            viewComponent = <Profile user={user}/>
+            viewComponent = <Profile/>
             break
         case views.BUILDING:
-            viewComponent = <Building stats={buildingStats}/>
+            viewComponent = <Building/>
             break
     }
 
@@ -62,6 +26,7 @@ const PhoneApp = ({view}) => {
                 {viewComponent}
             </div>
             <TabBar/>
+            <Add />
         </div>
         )
 }

@@ -8,6 +8,8 @@ require("./sass/default.scss")
 
 let store = createStore(todoApp)
 
+import {addCup} from './actions'
+
 render(
     <Provider store={store}>
         <App />

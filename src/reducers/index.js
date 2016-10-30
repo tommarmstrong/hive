@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { SET_VIEW } from '../actions'
+import { SET_VIEW, ADD_CUP, ADD_PEE, TOGGLE_ADD} from '../actions'
 import views from '../components/Views/views'
 
 function user(state = {
@@ -19,6 +19,30 @@ function user(state = {
         }
     }
 }, action) {
+    if (action.type === ADD_CUP) {
+        return {
+            ...state, activity: {
+                ...state.activity,
+                "Today": {
+                    ...state.activity.Today,
+                    "cups": state.activity.Today.cups + 1
+                }
+            }
+        }
+
+    }
+    if (action.type === ADD_PEE) {
+        return {
+            ...state, activity: {
+                ...state.activity,
+                "Today": {
+                    ...state.activity.Today,
+                    "pees": state.activity.Today.pees + 1
+                }
+            }
+        }
+
+    }
     return state
 }
 
@@ -60,7 +84,15 @@ function view(state = views.PROFILE, action) {
     }
 }
 
+function addVisible(state = false, action) {
+    if (action.type === TOGGLE_ADD) {
+        return !state
+    }
+    return state
+}
+
 const rootReducer = combineReducers({
+    addVisible,
     user,
     buildingStats,
     view

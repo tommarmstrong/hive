@@ -99,6 +99,22 @@ $iphoneWidth: 316px;
     height: 447px;
   }
 
+  .Add {
+    position: absolute;
+    bottom: 38px;
+    width: 100%;
+
+    background-color: white;
+
+    li {
+      list-style-type: none;
+      font: 500 16px $headingFont;
+      text-align: center;
+      border-top: 1px solid $borderColour;
+      padding: $sidePadding*1.5 $sidePadding;
+    }
+  }
+
   .Profile {
 
     h1.name, .avatar {
