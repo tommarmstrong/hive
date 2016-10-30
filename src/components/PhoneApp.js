@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import StatusBar from './StatusBar'
 import TabBar from './TabBar'
 import Profile from './Views/Profile'
+import Building from './Views/Building'
 import views from './Views/views'
 
 const PhoneApp = ({view}) => {
@@ -31,11 +32,27 @@ const PhoneApp = ({view}) => {
         ]
     }
 
+    let buildingStats = [
+        {
+            label: "Current stats",
+            items: [{
+                type: "energy",
+                title: "5 Mega Watts of Energy",
+                lineOne: "currently being used in the building",
+                lineTwo: ""
+            }]
+        }
+    ]
+
     let viewComponent
 
     switch (view) {
         case views.PROFILE:
             viewComponent = <Profile user={user}/>
+            break
+        case views.BUILDING:
+            viewComponent = <Building stats={buildingStats}/>
+            break
     }
 
     return (
@@ -44,7 +61,7 @@ const PhoneApp = ({view}) => {
             <div className="view">
                 {viewComponent}
             </div>
-            <TabBar screen="a"/>
+            <TabBar view={view}/>
         </div>
         )
 }

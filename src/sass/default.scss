@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
   margin: 0;
@@ -21,7 +22,7 @@ $iphoneWidth: 316px;
   display: inline-block;
 
   .iphone {
-	width: $iphoneWidth;
+    width: $iphoneWidth;
   }
 }
 
@@ -33,6 +34,7 @@ $iphoneWidth: 316px;
   $bodyFont: "Helvetica";
 
   $borderColour: #979797;
+  $highlightColour: #49d643;
 
   $sidePadding: 8px;
 
@@ -45,120 +47,158 @@ $iphoneWidth: 316px;
   background-color: #efefef;
 
   .StatusBar {
-	width: $width;
-	height: 15px;
-	background-color: black;
-	color: white;
+    width: $width;
+    height: 15px;
+    background-color: black;
+    color: white;
 
-	.time {
-	  display: block;
-	  text-align: center;
-	  line-height: 15px;
+    .time {
+      display: block;
+      text-align: center;
+      line-height: 15px;
 
-	  font-size: 10px;
-	  font-family: $headingFont;
-	}
+      font-size: 10px;
+      font-family: $headingFont;
+    }
   }
 
   .TabBar {
-	position: absolute;
-	bottom: 0;
-	left:0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
-	width: $width;
-	height: 38px;
+    width: $width;
+    height: 38px;
 
-	background-color: #D8D8D8;
+    background-color: #D8D8D8;
 
-	table {
-	  width: 100%;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: auto;
 
-	  td {
-		text-align: center;
-		height: 38px;
+      td {
+        text-align: center;
+        height: 38px;
+        width: 20%;
 
-		img {
-		  height: 28px;
-		}
-	  }
-	}
+        &.selected {
+          background-color: $highlightColour;
+        }
+
+        img {
+          height: 28px;
+          fill: white !important;
+        }
+      }
+    }
   }
 
   .Profile {
 
-	h1.name, .avatar {
-	  margin-top: 3*$sidePadding;
-	  margin-left: $sidePadding;
-	}
+    h1.name, .avatar {
+      margin-top: 3*$sidePadding;
+      margin-left: $sidePadding;
+    }
 
-	h1.name {
-	  display: inline-block;
-	  font: 500 24px $headingFont;
-	  vertical-align: top;
-	  line-height: 56px;
-	  margin-left: 2*$sidePadding;
-	}
+    h1.name {
+      display: inline-block;
+      font: 500 24px $headingFont;
+      vertical-align: top;
+      line-height: 56px;
+      margin-left: 2*$sidePadding;
+    }
 
-	h2 {
-	  font: 500 18px $headingFont;
-	  margin: $sidePadding*2 0 $sidePadding $sidePadding;
-	}
+    h2 {
+      font: 500 18px $headingFont;
+      margin: $sidePadding*2 0 $sidePadding $sidePadding;
+    }
 
-	img.avatar {
-	  max-width: 56px;
-	  max-height: 56px;
-	  display: inline;
-	}
+    img.avatar {
+      max-width: 56px;
+      max-height: 56px;
+      display: inline;
+    }
   }
 
   .ListDivider {
-	h1 {
-	  padding: 3px $sidePadding;
-	  font: 500 12px $headingFont;
-	}
+    h1 {
+      padding: 3px $sidePadding;
+      font: 500 12px $headingFont;
+    }
 
-	border-top: 1px solid $borderColour;
-	border-bottom: 1px solid $borderColour;
+    border-top: 1px solid $borderColour;
+    border-bottom: 1px solid $borderColour;
   }
 
   .ActivityItem {
-	padding: 4px $sidePadding;
-	border-bottom: 1px solid $borderColour;
+    padding: 4px $sidePadding;
+    border-bottom: 1px solid $borderColour;
 
-	h1 {
-	  font: 500 14px $headingFont;
-	}
+    h1 {
+      font: 500 14px $headingFont;
+    }
 
-	$iconWidth: 33px;
+    $iconWidth: 33px;
 
-	.activity-icon {
-	  width: $iconWidth;
-	  height: $iconWidth;
-	  margin-top: 4px;
+    .activity-icon {
+      width: $iconWidth;
+      height: $iconWidth;
+      margin-top: 4px;
 
-	  display: inline-block;
+      display: inline-block;
 
-	  background: no-repeat center center;
-	  background-size: contain;
+      background: no-repeat center center;
+      background-size: contain;
 
-	  &.stairs {background-image: url("../static/icons/stairs.svg");}
-	  &.phosphorous {background-image: url("../static/icons/phosphorous.svg");}
-	  &.coffee {background-image: url("../static/icons/coffee.svg");}
+      &.stairs {
+        background-image: url("../static/icons/stairs.svg");
+      }
+      &.phosphorous {
+        background-image: url("../static/icons/phosphorous.svg");
+      }
+      &.coffee {
+        background-image: url("../static/icons/coffee.svg");
+      }
 
-	}
+    }
 
-	.details {
-	  width: $width - $sidePadding*3 - $iconWidth;
-	  margin-left: $sidePadding;
-	  display: inline-block;
-	  vertical-align: top;
+    .details {
+      width: $width - $sidePadding*3 - $iconWidth;
+      margin-left: $sidePadding;
+      display: inline-block;
+      vertical-align: top;
 
-	  font: 500 12px $bodyFont;
+      font: 500 12px $bodyFont;
 
-	  p {
-		margin-top: 2px;
-	  }
-	}
+      p {
+        margin-top: 2px;
+      }
+    }
+  }
+
+  .Building {
+    img.building {
+      width: 100px;
+    }
+
+    h1.name, img.building {
+      margin-top: 3*$sidePadding;
+      margin-left: $sidePadding;
+    }
+
+    h1.name {
+      display: inline-block;
+      font: 500 24px $headingFont;
+      vertical-align: top;
+      margin-left: 2*$sidePadding;
+      margin-bottom: 2*$sidePadding;
+    }
+
+    h2 {
+      font: 500 18px $headingFont;
+      margin: $sidePadding*2 0 $sidePadding $sidePadding;
+    }
   }
 }
 
@@ -171,10 +211,10 @@ $iphoneWidth: 316px;
   margin: 150px 0 0 60px;
 
   h1, p {
-	font-family: "Helvetica";
+    font-family: "Helvetica";
   }
 
   p {
-	margin-top: 10px;
+    margin-top: 10px;
   }
 }
