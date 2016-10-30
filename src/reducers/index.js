@@ -46,32 +46,28 @@ function user(state = {
     return state
 }
 
-function buildingStats(state = [
-    {
-        label: "Current stats",
+function buildingStats(state = {
+    current: {
+        label: "Current Stats",
         items: [{
             type: "energy",
             title: "6 Mega Watts of Energy",
             lineOne: "currently being used in the building",
             lineTwo: ""
-        }]
-    },
-    {
-        label: "Total savings",
-        items: [{
-            type: "stairs",
-            title: "6 MJ of energy saved",
-            lineOne: "By not using the elevators",
-            lineTwo: " 483 flights of stairs climbed"
         },
         {
-            type: "phosphorous",
-            title: "1 kg of Phosphorous recovered",
-            lineOne: "by using the bathrooms in Building 11",
-            lineTwo: "3042 pees"
+            type: "people",
+            title: "431 People",
+            lineOne: "currently in the building",
+            lineTwo: ""
         }]
+    },
+    activity: {
+        "stairs": 483,
+        "pees": 3042,
+        "cups": 527
     }
-], action) {
+}, action) {
     return state
 }
 
