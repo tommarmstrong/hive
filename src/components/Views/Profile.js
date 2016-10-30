@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
+import { connect } from 'react-redux'
 import ActivityList from '../ActivityList'
 
-const Profile = ({user}) => {
+let Profile = ({user}) => {
 
     return (
         <div className="Profile">
@@ -12,5 +13,13 @@ const Profile = ({user}) => {
         </div>
     )
 }
+
+const mapStateToProps = (state) => {
+    return {
+        user: state.user
+    }
+}
+
+Profile = connect(mapStateToProps)(Profile)
 
 export default Profile

@@ -61,7 +61,7 @@ const PhoneApp = ({view}) => {
             <div className="view">
                 {viewComponent}
             </div>
-            <TabBar view={view}/>
+            <TabBar/>
         </div>
         )
 }
