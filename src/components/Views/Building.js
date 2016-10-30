@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
+import { connect } from 'react-redux'
 import ActivityList from '../ActivityList'
 
-const Building = ({stats}) => {
+let Building = ({stats}) => {
 
     return (
         <div className="Building">
@@ -12,8 +13,12 @@ const Building = ({stats}) => {
     )
 }
 
-Building.propTypes = {
-    stats: PropTypes.array.isRequired
+const mapStateToProps = (state) => {
+    return {
+        stats: state.buildingStats
+    }
 }
+
+Building = connect(mapStateToProps)(Building)
 
 export default Building

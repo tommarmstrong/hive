@@ -121,13 +121,16 @@ $iphoneWidth: 316px;
     }
   }
 
+  .ActivityListSection:first-child {
+    border-top: 1px solid $borderColour;
+  }
+
   .ListDivider {
     h1 {
       padding: 3px $sidePadding;
       font: 500 12px $headingFont;
     }
 
-    border-top: 1px solid $borderColour;
     border-bottom: 1px solid $borderColour;
   }
 
