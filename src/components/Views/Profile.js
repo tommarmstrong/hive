@@ -2,12 +2,15 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import ActivityList from '../ActivityList'
 
-let Profile = ({user, activities}) => {
+let Profile = ({user, activities, points}) => {
 
     return (
         <div className="Profile">
             <img className="avatar" src={require("../../static/images/john.jpg")} />
-            <h1 className="name">{user.profile.name}</h1>
+            <div className="user-details">
+                <h1 className="name">{user.profile.name}</h1>
+                <p className="points">{points} points</p>
+            </div>
             <h2>My Activity</h2>
             <ActivityList activities={activities}/>
         </div>
@@ -58,7 +61,8 @@ const mapStateToProps = (state) => {
 
     return {
         user: state.user,
-        activities: activities
+        activities: activities,
+        points: state.leaderBoard.Me
     }
 }
 

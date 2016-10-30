@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { addCup, addPee, toggleAdd } from "../actions"
+import { addCup, addPee, addPoints, toggleAdd } from "../actions"
 
 let Add = ({visible, addPee, addCup, cancel}) => {
     if (visible) {
@@ -27,10 +27,12 @@ const mapDispatchToProps = (dispatch) => {
     return {
         addCup: () => {
             dispatch(addCup())
+            dispatch(addPoints(1))
             dispatch(toggleAdd())
         },
         addPee: () => {
             dispatch(addPee())
+            dispatch(addPoints(2))
             dispatch(toggleAdd())
         },
         cancel: () => {

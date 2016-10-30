@@ -26,3 +26,18 @@ export const toggleAdd = () => {
         type: TOGGLE_ADD
     }
 }
+
+export const HIDE_ADD = 'HIDE_ADD'
+export const hideAdd = () => {
+    return {
+        type: HIDE_ADD
+    }
+}
+
+export const ADD_POINTS = 'ADD_POINTS'
+export const addPoints = (points) => {
+    return {
+        type: ADD_POINTS,
+        points
+    }
+}

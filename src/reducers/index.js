@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { SET_VIEW, ADD_CUP, ADD_PEE, TOGGLE_ADD} from '../actions'
+import { SET_VIEW, ADD_CUP, ADD_PEE, HIDE_ADD, TOGGLE_ADD, ADD_POINTS} from '../actions'
 import views from '../components/Views/views'
 
 function user(state = {
@@ -88,6 +88,22 @@ function addVisible(state = false, action) {
     if (action.type === TOGGLE_ADD) {
         return !state
     }
+    if (action.type === HIDE_ADD) {
+        return false
+    }
+    return state
+}
+
+function leaderBoard(state = {
+    Me: 10,
+    "Michael Bell": 15,
+    "Gina Curry": 5,
+    "Bertha	Hansen": 7,
+    "Ernesto Pearson": 4
+}, action) {
+    if (action.type === ADD_POINTS) {
+        return {...state, Me: state.Me + action.points}
+    }
     return state
 }
 
@@ -95,7 +111,8 @@ const rootReducer = combineReducers({
     addVisible,
     user,
     buildingStats,
-    view
+    view,
+    leaderBoard
 })
 
 export default rootReducer

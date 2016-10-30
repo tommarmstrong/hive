@@ -44,13 +44,12 @@ $iphoneWidth: 316px;
   display: inline-block;
   width: $width;
   height: $height;
-  background-color: #efefef;
+  background-color: white;
 
   .StatusBar {
     width: $width;
     height: 15px;
-    background-color: black;
-    color: white;
+    background-color: #efefef;
 
     .time {
       display: block;
@@ -70,7 +69,7 @@ $iphoneWidth: 316px;
     width: $width;
     height: 38px;
 
-    background-color: #D8D8D8;
+    background-color: #efefef;
 
     table {
       width: 100%;
@@ -94,9 +93,23 @@ $iphoneWidth: 316px;
     }
   }
 
+  .NavBar {
+    background-color: #efefef;
+    width: 100%;
+    text-align: center;
+    height: 33px;
+    vertical-align: middle;
+    font: 500 18px $headingFont;
+
+    p {
+      line-height: 33px;
+    }
+
+  }
+
   .view {
     overflow: scroll;
-    height: 447px;
+    height: 414px;
   }
 
   .Add {
@@ -117,17 +130,23 @@ $iphoneWidth: 316px;
 
   .Profile {
 
-    h1.name, .avatar {
+    .user-details, .avatar {
       margin-top: 3*$sidePadding;
       margin-left: $sidePadding;
     }
 
-    h1.name {
+    .user-details {
       display: inline-block;
-      font: 500 24px $headingFont;
       vertical-align: top;
-      line-height: 56px;
       margin-left: 2*$sidePadding;
+    }
+
+    h1.name {
+      font: 500 24px $headingFont;
+    }
+
+    .points {
+      font: 500 16px $headingFont;
     }
 
     h2 {
@@ -222,6 +241,43 @@ $iphoneWidth: 316px;
     h2 {
       font: 500 18px $headingFont;
       margin: $sidePadding*2 0 $sidePadding $sidePadding;
+    }
+  }
+
+    //<div className="user">
+    //<h1>{i+1}.</h1>
+    //<div className="details">
+    //<h2>{user.name}</h2>
+    //<p>{user.points} points</p>
+    //                </div>
+    //            </div>
+
+  .LeaderBoard {
+    .user {
+
+      padding: $sidePadding;
+      border-bottom: 1px solid $borderColour;
+
+      h1, h2, p {
+        font-family: $headingFont;
+      }
+
+      .details, h1 {
+        display: inline-block;
+      }
+
+      .details {
+        margin-left: $sidePadding;
+      }
+
+      h1 {
+        font-size: 40px;
+        font-weight: 300;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
     }
   }
 }

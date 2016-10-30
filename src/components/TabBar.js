@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react'
 import { connect } from 'react-redux'
 import views from './Views/views'
-import { setView, toggleAdd } from '../actions'
+import { setView, hideAdd, toggleAdd } from '../actions'
 
 let TabBar = ({view, onViewSelection, toggleAdd}) => {
 
@@ -31,6 +31,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onViewSelection: (view) => {
+            dispatch(hideAdd())
             dispatch(setView(view))
         },
         toggleAdd: () => {
