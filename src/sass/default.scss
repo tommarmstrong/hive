@@ -203,6 +203,12 @@ $iphoneWidth: 316px;
       &.coffee {
         background-image: url("../static/icons/coffee.svg");
       }
+      &.energy {
+         background-image: url("../static/icons/bolt.svg");
+      }
+      &.people {
+        background-image: url("../static/icons/leaderboard.svg");
+      }
 
     }
 
@@ -244,14 +250,6 @@ $iphoneWidth: 316px;
     }
   }
 
-    //<div className="user">
-    //<h1>{i+1}.</h1>
-    //<div className="details">
-    //<h2>{user.name}</h2>
-    //<p>{user.points} points</p>
-    //                </div>
-    //            </div>
-
   .LeaderBoard {
     .user {
 
@@ -278,6 +276,21 @@ $iphoneWidth: 316px;
       h2 {
         font-size: 16px;
       }
+    }
+  }
+
+  .GreenStrategies {
+    padding: $sidePadding;
+    border-bottom: 1px solid $borderColour;
+
+    h1 {
+      font: 500 20px $headingFont;
+    }
+
+    p {
+      margin-top: 4px;
+      font-family: $headingFont;
+      font-size: 14px;
     }
   }
 }

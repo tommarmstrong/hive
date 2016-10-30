@@ -5,6 +5,7 @@ import NavBar from './NavBar'
 import Profile from './Views/Profile'
 import Building from './Views/Building'
 import LeaderBoard from './Views/LeaderBoard'
+import GreenStrategies from './Views/GreenStrategies'
 import Add from './Add'
 import views from './Views/views'
 
@@ -26,8 +27,8 @@ const PhoneApp = ({view}) => {
             title = "Leaderboard"
             break
         case views.STRATEGIES:
-            viewComponent = null
-            title = "Green Strategies"
+            viewComponent = <GreenStrategies/>
+            title = "Tips"
             break
     }
 
