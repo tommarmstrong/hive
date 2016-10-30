@@ -94,6 +94,11 @@ $iphoneWidth: 316px;
     }
   }
 
+  .view {
+    overflow: scroll;
+    height: 447px;
+  }
+
   .Profile {
 
     h1.name, .avatar {

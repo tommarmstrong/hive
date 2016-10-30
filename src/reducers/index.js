@@ -6,25 +6,18 @@ function user(state = {
     profile: {
         name: "John Appleseed"
     },
-    activities: [
-        {
-            label: "Today",
-            items: [
-                {
-                    type: "stairs",
-                    title: "201 kJ of energy saved",
-                    lineOne: "By not using the elevators",
-                    lineTwo: " 3 flights of stairs climbed"
-                },
-                {
-                    type: "phosphorous",
-                    title: "21g of Phosphorous recovered",
-                    lineOne: "by using the bathrooms in Building 11",
-                    lineTwo: "2 pees"
-                }
-            ]
+    activity: {
+        "Today": {
+            "stairs": 5,
+            "pees": 2,
+            "cups": 1
+        },
+        "Yesterday": {
+            "stairs": 10,
+            "pees": 3,
+            "cups": 2
         }
-    ]
+    }
 }, action) {
     return state
 }
