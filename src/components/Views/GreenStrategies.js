@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-const GreenStragies = ({leaderBoard}) => {
+const GreenStratgies = ({leaderBoard}) => {
 
     const strategies = [{
         title: "Use your own water bottle",
@@ -23,4 +23,4 @@ const GreenStragies = ({leaderBoard}) => {
     )
 }
 
-export default GreenStragies
+export default GreenStratgies

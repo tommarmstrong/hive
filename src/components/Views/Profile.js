@@ -29,7 +29,7 @@ const mapStateToProps = (state) => {
                 case "stairs":
                     daysActivity.push({
                         type: "stairs",
-                        title: 16 * value + " kJ of energy saved",
+                        title: 9 * value + " kJ of energy saved",
                         lineOne: "By not using the elevators",
                         lineTwo: value + " flights of stairs climbed"
                     })

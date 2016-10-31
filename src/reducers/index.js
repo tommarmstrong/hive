@@ -91,11 +91,13 @@ function addVisible(state = false, action) {
 }
 
 function leaderBoard(state = {
-    Me: 10,
-    "Michael Bell": 15,
-    "Gina Curry": 5,
+    Me: 45,
+    "Michael Bell": 51,
+    "Gina Curry": 20,
     "Bertha	Hansen": 7,
-    "Ernesto Pearson": 4
+    "Ernesto Pearson": 38,
+    "Stella	Chambers": 19,
+    "Mark Bass": 3
 }, action) {
     if (action.type === ADD_POINTS) {
         return {...state, Me: state.Me + action.points}
