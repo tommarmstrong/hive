@@ -280,17 +280,25 @@ $iphoneWidth: 316px;
   }
 
   .GreenStrategies {
-    padding: $sidePadding;
-    border-bottom: 1px solid $borderColour;
 
     h1 {
-      font: 500 20px $headingFont;
+      font: 500 18px $headingFont;
     }
 
     p {
       margin-top: 4px;
       font-family: $headingFont;
       font-size: 14px;
+    }
+
+    .strategy {
+      padding: $sidePadding;
+      border-bottom: 1px solid $borderColour;
+    }
+
+    .reference {
+      padding: $sidePadding;
+      margin-top: $sidePadding*2;
     }
   }
 }
