@@ -12,7 +12,7 @@ $bodyWidth: 1024px;
 
 body {
   width: $bodyWidth;
-  margin: 100px auto;
+  margin: 50px auto;
 }
 
 $iphoneWidth: 316px;
@@ -310,5 +310,35 @@ $iphoneWidth: 316px;
   p {
     margin-top: 10px;
     line-height: 1.5rem;
+  }
+}
+
+.title, .subtitle, .rationale h1 {
+  font-family: "Helvetica";
+  margin-top: 10px;
+}
+
+.title, .subtitle {
+  display: inline-block;
+}
+
+.subtitle {
+  margin-left: 20px;
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.rationale {
+  margin: 100px auto 0;
+  width: 768px;
+  font-family: "Helvetica";
+  line-height: 1.5rem;
+
+  h1 {
+    margin-top: 30px;
+  }
+
+  p {
+    margin-top: 15px;
   }
 }
